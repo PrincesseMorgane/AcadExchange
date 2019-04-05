@@ -35,3 +35,19 @@ function dw_getMenu($location)
 //    var_dump($post,$item);die();
     return $menu;
 }
+
+/* Register Costume post types*/ 
+function dw_register_post_types(){
+    register_post_type('Echange', [
+    'label' => 'echange',
+    'labels' =>[
+        'singular_name' => 'echange',
+
+    ],
+    'public' => true,
+    'description' =>'les echanges parmis les academies',
+    'mneu_icon' => 'dashicons',
+    'menu-position' => 5,
+]);
+}
+add_action('init', 'dw_register_post_types');

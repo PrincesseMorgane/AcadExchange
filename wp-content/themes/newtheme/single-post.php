@@ -15,6 +15,14 @@
         <div class="article__content">
             <?php the_content(); ?>
         </div>
+        <section class="kitchen_instructions">
+        <h3 class="kitchen_sub">
+        Mode opératoire
+        </h3>
+        <div class="wysiwyg">
+        <?php the_field('instructions') ?>
+        </div>
+        </section>
         <footer class="article__more">
             <a href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer">Lire cet article</a>
         </footer>

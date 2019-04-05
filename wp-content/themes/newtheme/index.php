@@ -1,5 +1,14 @@
 <?php get_header(); ?>
 <h2>Mes derniers articles</h2>
+<?php 
+$articles = new WP_Query([
+    'post_type'=>'article',
+    'order'=>'DESC',
+    'orderby'=>'date',
+]);
+
+?>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <div class="archive">
         <div class="post__content">
